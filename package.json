@@ -1,5 +1,5 @@
 {
-  "name": "vinted-3",
+  "name": "vinted-4",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -23,6 +23,7 @@
     "cookie-signature": "^1.0.6",
     "core-js": "^3.6.5",
     "core-util-is": "^1.0.3",
+    "cors": "^2.8.5",
     "crypto-js": "^4.1.1",
     "data-uri-to-buffer": "^3.0.1",
     "debug": "^2.6.9",
@@ -31,6 +32,7 @@
     "denque": "^2.0.1",
     "depd": "^1.1.2",
     "destroy": "^1.0.4",
+    "dotenv": "^14.2.0",
     "ee-first": "^1.1.1",
     "encodeurl": "^1.0.2",
     "escape-html": "^1.0.3",
@@ -132,7 +134,7 @@
     "yallist": "^3.1.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",

@@ -4,9 +4,9 @@ const cloudinary = require("cloudinary").v2;
 const isAuthenticated = require("../middleware/isAuthenticated");
 
 cloudinary.config({
-  cloud_name: "dg7ewecoh",
-  api_key: "187199175119948",
-  api_secret: "nzvo4G0CKq7ks4Uww24-CjIsw28",
+  cloud_name: process.env.CLOUD_NAME,
+  api_key: process.env.API_KEY,
+  api_secret: process.env.API_SECRET,
 });
 
 const Offer = require("../model/Offer");
