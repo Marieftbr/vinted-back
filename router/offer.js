@@ -19,11 +19,11 @@ router.post("/offer/publish", isAuthenticated, async (req, res) => {
       res.json({
         message: "La description doit contenir maximum 500 caractères",
       });
-    } else if (req.product_name.length > 50) {
+    } else if (req.fields.product_name.length > 50) {
       res.json({
         message: "Le titre doit contenir maximum 50 caractères",
       });
-    } else if (req.product_price.price > 100000) {
+    } else if (req.fields.product_price > 100000) {
       res.json({
         message: "Le prix ne peux pas couter plus cher que 100 000€",
       });
@@ -66,6 +66,7 @@ router.post("/offer/publish", isAuthenticated, async (req, res) => {
       res.json(newOffer);
     }
   } catch (error) {
+    console.error(error);
     res.status(400).json({
       message: error.message,
     });
@@ -90,6 +91,7 @@ router.put("/update/offer", async (req, res) => {
       message: "Les changements ont bien été apportés à l'offre",
     });
   } catch (error) {
+    console.error(error);
     res.status(400).json({
       error: error.message,
     });
